@@ -1,129 +1,145 @@
-# Week 1 
+# Week 1
 
 ## Day 1
-### Python 3rd part Request Library
-This library makes http requests in Python.
 
+### Python Third-Party Requests Library
 
----
->>>request.get("https://api.github.com")
---- <Response[200]>
----
->>>response = requests.get("https://api.github.com")
----
----
->>>response.text
----
-*returns a string*
----
->>>response.context
----
-*returns raw bytes*
-
-#### Status Code
+The `requests` library makes HTTP requests in Python.
 
 ---
-<Response[200]>
-*means OK*
-<Response [404]>
-*means not found*
 
-to access status code:
----
->>>response.status_code
----
----
->>>if response.status_code == 200:
->>>     print ("Success")
->>>elif response.status_code == 404:
->>>     print ("Not found")
----
-Requests goes one step further in simplifying this process for you. If you use a Response instance in a Boolean context, such as a conditional statement, then it’ll evaluate to True when the status code is less than 400, and False otherwise.
+## Making a GET Request
 
-That means you can modify the last example by rewriting the if statement:
----
->>>if response:
->>>     print("Success")
->>>else:
->>>     raise Exception(f"Non-success status code: {response.status_code}")
----
-To use Request’s built-in capacities to raise an exception if the request was unsuccessful. :
----
->>>response.raise_for_status()
----
+```python
+import requests
 
-### Access the Response Content
+requests.get("https://api.github.com")
+Returns:
+<Response [200]>
 
-To see the response’s content in bytes, you use .content:
----
->>> response.content
-*b'{"current_user_url":"https://api.github.com/user", ...}'*
+response = requests.get("https://api.github.com")
+Accessing Response Text
 
->>> type(response.content)
-*<class 'bytes'>*
----
-To provide an explicit encoding by setting .encoding before accessing .text:
----
->>> response.encoding = "utf-8"  # Optional: Requests infers this.
->>> response.text
-*'{"current_user_url":"https://api.github.com/user", ...}'*
----
-To get a dictionary, take the str retrieved from .text and deserialize it using json.loads(). However, the direct way to accomplish this task is to use .json():
----
->>> response.json()
-*{'current_user_url': 'https://api.github.com/user', ...}*
+response.text
+Returns a string.
 
->>> type(response.json())
-*<class 'dict'>*
----
-The type of the return value of .json() is a dictionary, access values in the object by key:
----
->>> response_dict = response.json()
->>> response_dict["emojis_url"]
-*'https://api.github.com/emojis'*
----
 
-### View Response Headers
+response.content
+Returns raw bytes.
 
-To view headers, access .headers:
----
->>> import requests
+Status Codes
+<Response [200]> → OK
 
->>> response = requests.get("https://api.github.com")
->>> response.headers
-*{'Server': 'github.com',
-...
-'X-GitHub-Request-Id': 'AE83:3F40:2151C46:438A840:65C38178'}*
----
-The .headers attribute returns a dictionary-like object, allows to access header values by key.
+<Response [404]> → Not Found
 
-### Add Query String Parameters
+Access the status code:
 
-To modify results from the .get, pass a dictionary or tuple to PARAMS.
-#### Dictionary:
----
->>>import requests
 
->>>response = requests.get(
-    *"https://api.github.com/search/repositories",
-    params={"q": "language:python", "sort": "stars", "order": "desc"},
-)*
+response.status_code
+Example:
 
->>>json_response = response.json()
->>>popular_repositories = json_response["items"]
->>>for repo in popular_repositories[:3]:
->>>    print(f"Name: {repo['name']}")
->>>    print(f"Description: {repo['description']}")
->>>    print(f"Stars: {repo['stargazers_count']}\n")
----
 
-#### List of tuples:
----
->>> import requests
+if response.status_code == 200:
+    print("Success")
+elif response.status_code == 404:
+    print("Not found")
+Boolean Evaluation of Responses
+A Response object evaluates to:
 
->>> requests.get(
-...     "https://api.github.com/search/repositories",
-...     [("q", "language:python"), ("sort", "stars"), ("order", "desc")],
-... )
-*<Response [200]>*
----
+True if the status code is less than 400
+
+False otherwise
+
+Example:
+
+
+if response:
+    print("Success")
+else:
+    raise Exception(f"Non-success status code: {response.status_code}")
+Raising Exceptions Automatically
+Use Requests’ built-in method to raise an exception for unsuccessful requests:
+
+
+response.raise_for_status()
+Accessing the Response Content
+To see the response content in bytes:
+
+
+response.content
+
+b'{"current_user_url":"https://api.github.com/user", ...}'
+
+type(response.content)
+<class 'bytes'>
+Setting Encoding Explicitly
+
+You can set encoding before accessing .text:
+
+
+response.encoding = "utf-8"  # Optional: Requests usually infers this
+response.text
+
+'{"current_user_url":"https://api.github.com/user", ...}'
+Parsing JSON Responses
+The recommended way to parse JSON is using .json():
+
+
+response.json()
+
+{'current_user_url': 'https://api.github.com/user', ...}
+
+type(response.json())
+
+<class 'dict'>
+Access values by key:
+
+
+response_dict = response.json()
+response_dict["emojis_url"]
+'https://api.github.com/emojis'
+Viewing Response Headers
+
+response.headers
+Example:
+
+
+response.headers["Server"]
+Headers are returned as a dictionary-like object.
+
+Adding Query String Parameters
+You can pass query parameters using a dictionary:
+
+python:
+response = requests.get(
+    "https://api.github.com/search/repositories",
+    params={
+        "q": "language:python",
+        "sort": "stars",
+        "order": "desc"
+    }
+)
+
+json_response = response.json()
+popular_repositories = json_response["items"]
+
+for repo in popular_repositories[:3]:
+    print(f"Name: {repo['name']}")
+    print(f"Description: {repo['description']}")
+    print(f"Stars: {repo['stargazers_count']}\n")
+### Query Parameters as a List of Tuples
+
+```python
+requests.get(
+    "https://api.github.com/search/repositories",
+    params=[
+        ("q", "language:python"),
+        ("sort", "stars"),
+        ("order", "desc")
+    ]
+)
+```
+
+```
+<Response [200]>
+```
