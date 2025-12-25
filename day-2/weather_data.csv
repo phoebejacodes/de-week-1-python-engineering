@@ -1,0 +1,9 @@
+city,country,temp_celsius,humidity,description,fetched_at
+London,GB,3.89,76,few clouds,2025-12-24T17:30:12.529982
+Tokyo,JP,7.58,91,overcast clouds,2025-12-24T17:30:12.746272
+New York,US,5.29,52,clear sky,2025-12-24T17:30:12.961541
+Paris,FR,0.16,71,broken clouds,2025-12-24T17:30:13.178868
+Sydney,AU,20.55,63,light intensity drizzle,2025-12-24T17:30:13.395394
+Kingston,JM,27.33,66,broken clouds,2025-12-24T17:30:13.607817
+Berlin,DE,-6.06,83,few clouds,2025-12-24T17:30:14.037484
+Mumbai,IN,22.99,56,smoke,2025-12-24T17:30:14.261800

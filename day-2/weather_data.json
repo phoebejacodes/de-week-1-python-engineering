@@ -1,0 +1,66 @@
+[
+  {
+    "city": "London",
+    "country": "GB",
+    "temp_celsius": 3.89,
+    "humidity": 76,
+    "description": "few clouds",
+    "fetched_at": "2025-12-24T17:30:12.529982"
+  },
+  {
+    "city": "Tokyo",
+    "country": "JP",
+    "temp_celsius": 7.58,
+    "humidity": 91,
+    "description": "overcast clouds",
+    "fetched_at": "2025-12-24T17:30:12.746272"
+  },
+  {
+    "city": "New York",
+    "country": "US",
+    "temp_celsius": 5.29,
+    "humidity": 52,
+    "description": "clear sky",
+    "fetched_at": "2025-12-24T17:30:12.961541"
+  },
+  {
+    "city": "Paris",
+    "country": "FR",
+    "temp_celsius": 0.16,
+    "humidity": 71,
+    "description": "broken clouds",
+    "fetched_at": "2025-12-24T17:30:13.178868"
+  },
+  {
+    "city": "Sydney",
+    "country": "AU",
+    "temp_celsius": 20.55,
+    "humidity": 63,
+    "description": "light intensity drizzle",
+    "fetched_at": "2025-12-24T17:30:13.395394"
+  },
+  {
+    "city": "Kingston",
+    "country": "JM",
+    "temp_celsius": 27.33,
+    "humidity": 66,
+    "description": "broken clouds",
+    "fetched_at": "2025-12-24T17:30:13.607817"
+  },
+  {
+    "city": "Berlin",
+    "country": "DE",
+    "temp_celsius": -6.06,
+    "humidity": 83,
+    "description": "few clouds",
+    "fetched_at": "2025-12-24T17:30:14.037484"
+  },
+  {
+    "city": "Mumbai",
+    "country": "IN",
+    "temp_celsius": 22.99,
+    "humidity": 56,
+    "description": "smoke",
+    "fetched_at": "2025-12-24T17:30:14.261800"
+  }
+]
