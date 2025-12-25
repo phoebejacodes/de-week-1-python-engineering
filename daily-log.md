@@ -41,20 +41,20 @@
 - Hours Worked: ~8 hours
 
 - ### Completed:
-- [x]Explored common failure modes in API calls (404s, connection errors, missing keys)
-- [x]Differentiated HTTP errors vs runtime/transport exceptions
-- [x]Implemented try/except patterns for controlled failure handling
-- [x]Used raise_for_status() to convert HTTP errors into exceptions
-- [x]Built safe API wrapper functions with timeouts
-- [x]Practiced handling multiple exception types
-- [x]Introduced environment variables for configuration
-- [x]Managed API keys securely (no hardcoding)
-- [x]Used .env files with python-dotenv
-- [x]Implemented retries with capped attempts
-- [x]Added rate limiting via request delays
-- [x]Built a multi-step, resilient ingestion pipeline
-- [x]Produced summary reporting for pipeline outcomes
-- [x]Practiced bash environment variables and shell configuration
+- [x] Explored common failure modes in API calls (404s, connection errors, missing keys)
+- [x] Differentiated HTTP errors vs runtime/transport exceptions
+- [x] Implemented try/except patterns for controlled failure handling
+- [x] Used raise_for_status() to convert HTTP errors into exceptions
+- [x] Built safe API wrapper functions with timeouts
+- [x] Practiced handling multiple exception types
+- [x] Introduced environment variables for configuration
+- [x] Managed API keys securely (no hardcoding)
+- [x] Used .env files with python-dotenv
+- [x] Implemented retries with capped attempts
+- [x] Added rate limiting via request delays
+- [x] Built a multi-step, resilient ingestion pipeline
+- [x] Produced summary reporting for pipeline outcomes
+- [x] Practiced bash environment variables and shell configuration
 
 ### Struggled with:
 -Reasoning about when retries are appropriate vs wasteful
