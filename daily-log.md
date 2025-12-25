@@ -39,7 +39,8 @@
 - Start time: 6:47 AM
 - End time: 8:21 PM
 - Hours Worked: ~8 hours
--###Completed:
+
+- ### Completed:
 - [x]Explored common failure modes in API calls (404s, connection errors, missing keys)
 - [x]Differentiated HTTP errors vs runtime/transport exceptions
 - [x]Implemented try/except patterns for controlled failure handling
