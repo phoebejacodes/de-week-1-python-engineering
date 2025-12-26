@@ -1,0 +1,4 @@
+2025-12-25 09:58:28,396 - INFO - Application started
+2025-12-25 09:58:28,398 - DEBUG - This is a debug message
+2025-12-25 09:58:28,398 - WARNING - This is a warning
+2025-12-25 09:58:28,398 - INFO - Application finished

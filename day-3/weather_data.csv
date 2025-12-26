@@ -1,0 +1,7 @@
+city,country,temp_celsius,humidity,description,fetched_at
+London,GB,4.06,73,overcast clouds,2025-12-25T12:23:32.455416
+Tokyo,JP,9.56,91,broken clouds,2025-12-25T12:23:32.673678
+New York,US,7.29,52,clear sky,2025-12-25T12:23:32.894457
+Paris,FR,0.94,77,clear sky,2025-12-25T12:23:33.138523
+Kingston,JM,31.77,51,clear sky,2025-12-25T12:23:33.363333
+Berlin,DE,-5.25,72,clear sky,2025-12-25T12:23:33.882023

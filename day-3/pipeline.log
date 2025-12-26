@@ -1,0 +1,116 @@
+2025-12-25 11:09:01,410 - INFO - ==================================================
+2025-12-25 11:09:01,411 - INFO - Weather Pipeline Started
+2025-12-25 11:09:01,411 - INFO - ==================================================
+2025-12-25 11:09:01,411 - INFO - Processing 6 cities
+2025-12-25 11:09:01,827 - INFO - Successfully fetched London: 4.32°C
+2025-12-25 11:09:02,127 - INFO - Successfully fetched Tokyo: 9.56°C
+2025-12-25 11:09:02,435 - INFO - Successfully fetched New York: 5.12°C
+2025-12-25 11:09:02,768 - INFO - Successfully fetched Paris: 1.55°C
+2025-12-25 11:09:03,151 - ERROR - HTTP Error for InvalidCity123: 404
+2025-12-25 11:09:03,457 - INFO - Successfully fetched Berlin: -4.78°C
+2025-12-25 11:09:03,459 - INFO - Completed: 5 success, 1 failed
+2025-12-25 11:09:03,460 - WARNING - Failed cities: ['InvalidCity123']
+2025-12-25 11:09:03,461 - INFO - Wrote 5 records to weather_data.json
+2025-12-25 11:09:03,461 - INFO - Wrote 5 records to weather_data.csv
+2025-12-25 11:09:03,461 - INFO - Pipeline completed
+2025-12-25 11:10:04,596 - INFO - ==================================================
+2025-12-25 11:10:04,597 - INFO - Weather Pipeline Started
+2025-12-25 11:10:04,597 - INFO - ==================================================
+2025-12-25 11:10:04,597 - INFO - Processing 7 cities
+2025-12-25 11:10:04,912 - INFO - Successfully fetched London: 4.32°C
+2025-12-25 11:10:05,214 - INFO - Successfully fetched Tokyo: 9.56°C
+2025-12-25 11:10:05,535 - INFO - Successfully fetched New York: 5.12°C
+2025-12-25 11:10:05,836 - INFO - Successfully fetched Paris: 1.55°C
+2025-12-25 11:10:06,138 - INFO - Successfully fetched Kingston: 30.66°C
+2025-12-25 11:10:06,524 - ERROR - HTTP Error for InvalidCity123: 404
+2025-12-25 11:10:07,186 - INFO - Successfully fetched Berlin: -4.86°C
+2025-12-25 11:10:07,187 - INFO - Completed: 6 success, 1 failed
+2025-12-25 11:10:07,187 - WARNING - Failed cities: ['InvalidCity123']
+2025-12-25 11:10:07,188 - INFO - Wrote 6 records to weather_data.json
+2025-12-25 11:10:07,188 - INFO - Wrote 6 records to weather_data.csv
+2025-12-25 11:10:07,189 - INFO - Pipeline completed
+2025-12-25 11:10:51,647 - INFO - ==================================================
+2025-12-25 11:10:51,648 - INFO - Weather Pipeline Started
+2025-12-25 11:10:51,648 - INFO - ==================================================
+2025-12-25 11:10:51,648 - INFO - Processing 7 cities
+2025-12-25 11:10:51,648 - DEBUG - Fetching weather for London
+2025-12-25 11:10:51,658 - DEBUG - Starting new HTTPS connection (1): api.openweathermap.org:443
+2025-12-25 11:10:51,976 - DEBUG - https://api.openweathermap.org:443 "GET /data/2.5/weather?q=London&appid=9de7fb62aeb02520a5f57009a081b80b&units=metric HTTP/1.1" 200 499
+2025-12-25 11:10:51,978 - INFO - Successfully fetched London: 4.32°C
+2025-12-25 11:10:51,979 - DEBUG - Fetching weather for Tokyo
+2025-12-25 11:10:51,980 - DEBUG - Starting new HTTPS connection (1): api.openweathermap.org:443
+2025-12-25 11:10:52,271 - DEBUG - https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Tokyo&appid=9de7fb62aeb02520a5f57009a081b80b&units=metric HTTP/1.1" 200 499
+2025-12-25 11:10:52,272 - INFO - Successfully fetched Tokyo: 9.56°C
+2025-12-25 11:10:52,273 - DEBUG - Fetching weather for New York
+2025-12-25 11:10:52,275 - DEBUG - Starting new HTTPS connection (1): api.openweathermap.org:443
+2025-12-25 11:10:52,587 - DEBUG - https://api.openweathermap.org:443 "GET /data/2.5/weather?q=New+York&appid=9de7fb62aeb02520a5f57009a081b80b&units=metric HTTP/1.1" 200 507
+2025-12-25 11:10:52,588 - INFO - Successfully fetched New York: 5.12°C
+2025-12-25 11:10:52,588 - DEBUG - Fetching weather for Paris
+2025-12-25 11:10:52,590 - DEBUG - Starting new HTTPS connection (1): api.openweathermap.org:443
+2025-12-25 11:10:52,888 - DEBUG - https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Paris&appid=9de7fb62aeb02520a5f57009a081b80b&units=metric HTTP/1.1" 200 495
+2025-12-25 11:10:52,889 - INFO - Successfully fetched Paris: 1.55°C
+2025-12-25 11:10:52,890 - DEBUG - Fetching weather for Kingston
+2025-12-25 11:10:52,892 - DEBUG - Starting new HTTPS connection (1): api.openweathermap.org:443
+2025-12-25 11:10:53,209 - DEBUG - https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Kingston&appid=9de7fb62aeb02520a5f57009a081b80b&units=metric HTTP/1.1" 200 516
+2025-12-25 11:10:53,210 - INFO - Successfully fetched Kingston: 30.66°C
+2025-12-25 11:10:53,211 - DEBUG - Fetching weather for InvalidCity123
+2025-12-25 11:10:53,213 - DEBUG - Starting new HTTPS connection (1): api.openweathermap.org:443
+2025-12-25 11:10:53,517 - DEBUG - https://api.openweathermap.org:443 "GET /data/2.5/weather?q=InvalidCity123&appid=9de7fb62aeb02520a5f57009a081b80b&units=metric HTTP/1.1" 404 40
+2025-12-25 11:10:53,520 - ERROR - HTTP Error for InvalidCity123: 404
+2025-12-25 11:10:53,522 - DEBUG - Fetching weather for Berlin
+2025-12-25 11:10:53,527 - DEBUG - Starting new HTTPS connection (1): api.openweathermap.org:443
+2025-12-25 11:10:53,829 - DEBUG - https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Berlin&appid=9de7fb62aeb02520a5f57009a081b80b&units=metric HTTP/1.1" 200 499
+2025-12-25 11:10:53,830 - INFO - Successfully fetched Berlin: -4.86°C
+2025-12-25 11:10:53,830 - INFO - Completed: 6 success, 1 failed
+2025-12-25 11:10:53,831 - WARNING - Failed cities: ['InvalidCity123']
+2025-12-25 11:10:53,836 - INFO - Wrote 6 records to weather_data.json
+2025-12-25 11:10:53,839 - INFO - Wrote 6 records to weather_data.csv
+2025-12-25 11:10:53,839 - INFO - Pipeline completed
+2025-12-25 11:14:53,256 - INFO - ==================================================
+2025-12-25 11:14:53,257 - INFO - Weather Pipeline Started
+2025-12-25 11:14:53,258 - INFO - ==================================================
+2025-12-25 11:14:53,258 - INFO - Processing 7 cities
+2025-12-25 11:14:53,578 - INFO - Successfully fetched London: 4.32°C
+2025-12-25 11:14:53,872 - INFO - Successfully fetched Tokyo: 9.56°C
+2025-12-25 11:14:54,175 - INFO - Successfully fetched New York: 5.67°C
+2025-12-25 11:14:54,490 - INFO - Successfully fetched Paris: 1.55°C
+2025-12-25 11:14:54,827 - INFO - Successfully fetched Kingston: 30.66°C
+2025-12-25 11:14:55,217 - ERROR - HTTP Error for InvalidCity123: 404
+2025-12-25 11:14:55,519 - INFO - Successfully fetched Berlin: -4.86°C
+2025-12-25 11:14:55,520 - INFO - Completed: 6 success, 1 failed
+2025-12-25 11:14:55,520 - WARNING - Failed cities: ['InvalidCity123']
+2025-12-25 11:14:55,525 - INFO - Wrote 6 records to weather_data.json
+2025-12-25 11:14:55,527 - INFO - Wrote 6 records to weather_data.csv
+2025-12-25 11:14:55,528 - INFO - Pipeline completed
+2025-12-25 11:15:32,321 - INFO - ==================================================
+2025-12-25 11:15:32,322 - INFO - Weather Pipeline Started
+2025-12-25 11:15:32,322 - INFO - ==================================================
+2025-12-25 11:15:32,322 - INFO - Processing 7 cities
+2025-12-25 11:15:32,672 - INFO - Successfully fetched London: 4.32°C
+2025-12-25 11:15:32,972 - INFO - Successfully fetched Tokyo: 9.56°C
+2025-12-25 11:15:33,263 - INFO - Successfully fetched New York: 5.67°C
+2025-12-25 11:15:33,566 - INFO - Successfully fetched Paris: 1.55°C
+2025-12-25 11:15:33,861 - INFO - Successfully fetched Kingston: 30.66°C
+2025-12-25 11:15:34,158 - ERROR - HTTP Error for InvalidCity123: 404
+2025-12-25 11:15:34,462 - INFO - Successfully fetched Berlin: -4.86°C
+2025-12-25 11:15:34,463 - INFO - Completed: 6 success, 1 failed
+2025-12-25 11:15:34,463 - WARNING - Failed cities: ['InvalidCity123']
+2025-12-25 11:15:34,467 - INFO - Wrote 6 records to weather_data.json
+2025-12-25 11:15:34,470 - INFO - Wrote 6 records to weather_data.csv
+2025-12-25 11:15:34,471 - INFO - Pipeline completed
+2025-12-25 12:23:32,206 - INFO - ==================================================
+2025-12-25 12:23:32,207 - INFO - Weather Pipeline Started
+2025-12-25 12:23:32,207 - INFO - ==================================================
+2025-12-25 12:23:32,207 - INFO - Processing 7 cities
+2025-12-25 12:23:32,455 - INFO - Successfully fetched London: 4.06°C
+2025-12-25 12:23:32,673 - INFO - Successfully fetched Tokyo: 9.56°C
+2025-12-25 12:23:32,894 - INFO - Successfully fetched New York: 7.29°C
+2025-12-25 12:23:33,138 - INFO - Successfully fetched Paris: 0.94°C
+2025-12-25 12:23:33,363 - INFO - Successfully fetched Kingston: 31.77°C
+2025-12-25 12:23:33,660 - ERROR - HTTP Error for InvalidCity123: 404
+2025-12-25 12:23:33,882 - INFO - Successfully fetched Berlin: -5.25°C
+2025-12-25 12:23:33,882 - INFO - Completed: 6 success, 1 failed
+2025-12-25 12:23:33,882 - WARNING - Failed cities: ['InvalidCity123']
+2025-12-25 12:23:33,887 - INFO - Wrote 6 records to weather_data.json
+2025-12-25 12:23:33,889 - INFO - Wrote 6 records to weather_data.csv
+2025-12-25 12:23:33,889 - INFO - Pipeline completed

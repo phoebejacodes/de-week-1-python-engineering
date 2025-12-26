@@ -77,10 +77,57 @@
 -Tooling noise (VS Code, Python env discovery) is normal and not a signal of broken code
 -Robust pipelines are defined by how they fail, not how they succeed
 
+
+## Day 3 (Christmas :christmas_tree: )
+- Start time: 7:18 AM
+- End time: 7:01 PM
+- Hours Worked: ~8 hours
+- ### Completed:
+- [x] Implemented structured logging using Python’s `logging` module  
+- [x] Learned the difference between `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`  
+- [x] Replaced `print()` statements with proper logging calls  
+- [x] Configured logging to output to both console and file  
+- [x] Learned when and why to use `basicConfig()` vs custom log handlers  
+- [x] Built a reusable logging setup across scripts  
+- [x] Refactored scripts into a clean, production-style pipeline  
+- [x] Introduced `pathlib` for clean, OS-agnostic file handling  
+- [x] Organized project structure into:
+  - `src/`
+  - `data/`
+  - `logs/`
+  - `output/`
+- [x] Built a fully structured pipeline with:
+  - Config management
+  - API ingestion
+  - Error handling
+  - Logging
+  - Output persistence
+- [x] Created a Bash runner to automate execution  
+- [x] Used environment variables for secrets (`.env`)
+- [x] Learned how logging enables observability and debugging in real systems  
+
+### Struggled with:
+- Structuring a real project instead of a single script  
+- Managing relative paths across folders  
+- Keeping configuration separate from code  
+- Thinking in terms of pipelines instead of scripts 
+
+### Key Laernings:
+- Logging is for **humans and systems**, not just debugging  
+- `logging` provides visibility into runtime behavior and failures  
+- Log levels communicate intent and severity  
+- `print()` is for exploration; logging is for production  
+- `pathlib` makes filesystem code safer and cleaner  
+- Separating config, logic, and execution improves maintainability  
+- Structured projects scale better than scripts  
+- Good pipelines fail loudly and clearly  
+
 ### Tomorrow's focus:
-- Observability: making pipelines self-describing through structured logging instead of print statements
--Maintainability: organizing files, paths, and project structure for long-term scalability
--More Bash logic (variables, loops, conditionals) to support repeatable workflows
+- argparse and CLI Tools
+- Command line arguments
+- Building reusable scripts
+- Configuration management
+- More bash: functions and advanced scripting
 
 - Struggled with:
 - Key learnings:
