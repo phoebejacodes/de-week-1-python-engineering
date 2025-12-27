@@ -7,9 +7,9 @@
 # Configuration
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
-PYTHON_SCRIPT="$PROJECT_DIR/06_file_input_cli.py"
-DEFAULT_CITIES_FILE="$PROJECT_DIR/cities.txt"
-OUTPUT_DIR="$PROJECT_DIR/output"
+PYTHON_SCRIPT="$PROJECT_DIR/day-4/06_file_input_cli.py"
+DEFAULT_CITIES_FILE="$PROJECT_DIR/day-4/cities.txt"
+OUTPUT_DIR="$PROJECT_DIR/day-4/output"
 LOG_FILE="$OUTPUT_DIR/run_$(date +%Y%m%d_%H%M%S).log"
 
 # Functions
@@ -27,11 +27,15 @@ check_requirements() {
     fi
     
     if [ -z "$OPENWEATHER_API_KEY" ]; then
-        log "WARNING: OPENWEATHER_API_KEY not set, loading from .env"
+    log "Loading environment variables from .env"
+    
         if [ -f "$PROJECT_DIR/.env" ]; then
-            export $(cat "$PROJECT_DIR/.env" | xargs)
+        set -a
+        source "$PROJECT_DIR/.env"
+        set +a
         fi
     fi
+
     
     if [ -z "$OPENWEATHER_API_KEY" ]; then
         log "ERROR: OPENWEATHER_API_KEY not available"
