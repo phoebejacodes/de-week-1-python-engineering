@@ -122,13 +122,51 @@
 - Structured projects scale better than scripts  
 - Good pipelines fail loudly and clearly  
 
-### Tomorrow's focus:
-- argparse and CLI Tools
-- Command line arguments
-- Building reusable scripts
-- Configuration management
-- More bash: functions and advanced scripting
+## Day 4
+- Start time: 9:31 AM
+- End time: 7:18 PM
+- Hours Worked: ~ 9 hours
 
-- Struggled with:
-- Key learnings:
-- Tomorrow's focus:
+### Completed
+
+- [x] Basic argparse setup with positional and optional arguments
+- [x] Argument types, validation, and choices
+- [x] Short flags (-v) and long flags (--verbose)
+- [x] Mutually exclusive argument groups
+- [x] Built weather CLI tool with multiple options
+- [x] File input via CLI (--file flag)
+- [x] Subcommands pattern (fetch, convert, info)
+- [x] Environment variable fallbacks in CLI
+- [x] Bash functions (parameters, return values, local variables)
+- [x] Bash argument parsing with case statements
+- [x] Shell script to run Python CLI with logging
+- [x] Combined everything into pipeline CLI tool
+
+### Struggled With
+- Understanding how `argparse` wires together subcommands and arguments
+- Knowing where logic should live (main function vs handler functions)
+- Keeping track of how arguments flow from CLI → parser → function
+- Remembering when to use positional vs optional arguments
+- Debugging silent failures caused by incorrect file paths or missing flags
+- Understanding how scripts, shell commands, and Python execution interact
+
+### Key Learnings
+- CLI tools are just structured Python programs with argument parsing
+- `argparse` turns raw user input into structured data
+- `subparsers` let you design multi-command tools (like `git`, `docker`)
+- Environment variables are essential for secrets and configuration
+- Logging replaces print statements in real applications
+- Separating logic (fetch, convert, output) makes programs scalable
+- File paths should always be handled with `pathlib`
+- Debugging CLI tools requires reading error output carefully
+- You don’t need to memorize — you need to understand patterns
+
+
+### Tomorrow's Focus
+
+- Day 5: Retry logic and resilience
+- Exponential backoff
+- Rate limiting
+- tenacity library
+- Circuit breaker pattern
+- Making code that survives failures
