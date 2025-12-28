@@ -356,7 +356,49 @@ if __name__ == "__main__":
 | Logging         | Observability     | Silent failures      |
 | Output Handling | Persistence       | Data loss            |
 
+## Day 6
+- Start time: 9:07 AM
+- End time: 6:49 PM
+- Hours Worked: ~ 7 hours
+
+### Completed
+- Explored **CSV, JSON, and Parquet** formats in depth
+- Built scripts to:
+  - Read/write CSV, JSON, and JSONL
+  - Compare file sizes and performance
+  - Convert between formats using Pandas and PyArrow
+- Learned how **Parquet** stores data column-wise and why it’s faster and smaller
+- Implemented **format converters** (CSV ↔ JSON ↔ Parquet)
+- Built tools to inspect file metadata (rows, columns, schema)
+- Learned **chunked processing** for large datasets
+- Implemented **retry logic**, **rate limiting**, and **circuit breakers**
+- Built a full **resilient pipeline** with:
+  - Logging
+  - Retry + backoff
+  - Error handling
+  - Graceful failure
+- Learned how to debug and fix environment issues (conda, pyarrow, path issues)
+
+### Struggled With
+- Debugging Python environment issues (conda + pyarrow + system libs)
+- Distinguishing when to use:
+  - retry vs retry-with-backoff  
+  - rate limiting vs circuit breaker  
+- Feeling overwhelmed by how many moving parts exist in a “real” pipeline
+- Internalizing that most production code is defensive
+
+### Key Learnings
+- **CSV** is simple but inefficient; everything is a string
+- **JSON** preserves structure but is large and slow for analytics
+- **Parquet** is columnar, compressed, and designed for analytics workloads
+- Chunking is mandatory for large files to avoid memory issues
+- Real pipelines are built from small, composable parts
+- Most complexity exists to handle *failure*, not success
+- You don’t need to invent solutions — you assemble proven patterns
+- Understanding > memorization; clarity > speed
+
+
 
 ### Tomorrow's Focus
 
-- Day 6: Data Formats and Parquet
+- Day 7: Integration Project
