@@ -1,4 +1,5 @@
 # Week 1 Daily Log
+---
 
 ## Day 1
 - Start time: 6:54 AM
@@ -34,6 +35,7 @@
 - wc -l counts lines, not records — format matters
 - Different data formats require different inspection tools (grep vs jq)
 - The Fetch → Transform → Persist pattern is reusable across all pipelines
+---
 
 ## Day 2
 - Start time: 6:47 AM
@@ -77,6 +79,7 @@
 -Tooling noise (VS Code, Python env discovery) is normal and not a signal of broken code
 -Robust pipelines are defined by how they fail, not how they succeed
 
+---
 
 ## Day 3 (Christmas :christmas_tree: )
 - Start time: 7:18 AM
@@ -121,6 +124,7 @@
 - Separating config, logic, and execution improves maintainability  
 - Structured projects scale better than scripts  
 - Good pipelines fail loudly and clearly  
+---
 
 ## Day 4
 - Start time: 9:31 AM
@@ -263,7 +267,7 @@ if __name__ == "__main__":
     main()
 
 ```
-
+---
 ## Day 5
 - Start time: 8:02 AM
 - End time: 6:19 PM
@@ -355,6 +359,7 @@ if __name__ == "__main__":
 | Circuit Breaker | System failure    | Cascading outages    |
 | Logging         | Observability     | Silent failures      |
 | Output Handling | Persistence       | Data loss            |
+---
 
 ## Day 6
 - Start time: 9:07 AM
@@ -396,9 +401,90 @@ if __name__ == "__main__":
 - Most complexity exists to handle *failure*, not success
 - You don’t need to invent solutions — you assemble proven patterns
 - Understanding > memorization; clarity > speed
+---
+## Day 7
+- Start time: 8:40 AM
+- End time: 1:25 PM
+- Hours Worked: ~ 4 hours
+
+### Completed
+- Built a **fully modular data pipeline** combining:
+  - CLI interface with subcommands
+  - API ingestion with retry + rate limiting
+  - Format conversion (CSV, JSON, JSONL, Parquet)
+  - Robust file handling and schema awareness
+- Implemented **end-to-end data flow**:
+  - Input → Validation → Processing → Output
+- Built and validated:
+  - `config.py` for centralized configuration
+  - `api.py` for resilient API access
+  - `formats.py` for format conversion
+  - `pipeline.py` for orchestration
+  - CLI entrypoint with argparse
+- Successfully handled:
+  - Partial failures
+  - Rate limiting
+  - Logging
+  - Structured output
+- Debugged and resolved environment issues (conda, pyarrow, PATH conflicts)
+- Verified full pipeline execution with real API data
 
 
+### Struggled With
+- Environment instability (conda + pyarrow conflicts)
+- Understanding *why* certain abstractions existed before seeing them work together
+- Debugging dependency issues that were unrelated to code logic
+- Mental overload from managing many moving parts at once
+- Distinguishing “code that works” vs “code that scales cleanly”
 
-### Tomorrow's Focus
 
-- Day 7: Integration Project
+### Key Learnings
+- Real-world data engineering is **systems design**, not just code
+- Clean abstractions matter more than clever code
+- Most complexity comes from *interfaces* between components
+- Configuration, logging, and error handling are first-class features
+- Once patterns repeat (retry, format handling, IO), everything becomes composable
+- Understanding > memorization — the architecture finally “clicked”
+
+---
+---
+## Week 1 Complete
+
+### What I Built
+- Day 1: API calls, JSON parsing, file I/O
+- Day 2: Error handling, authentication, environment variables
+- Day 3: Logging, project structure, pathlib
+- Day 4: CLI tools with argparse, Bash scripting
+- Day 5: Retry logic, rate limiting, circuit breakers
+- Day 6: Multiple data formats, Parquet, format conversion
+- Day 7: Complete integrated pipeline with all features
+
+### Key Skills Gained
+- Production-ready Python scripting
+- Error handling patterns
+- API integration with resilience
+- Command-line tool development
+- Multiple data formats
+- Bash scripting basics
+- Project organization
+- Debugging environment and dependency issues
+
+### What Was Hard
+- Keeping the big picture in mind while managing many moving parts
+- Understanding why certain abstractions (like config layers or helpers) exist
+- Debugging environment issues (Python versions, packages, paths)
+- Knowing when something was “good enough” versus overengineering
+- Trusting myself when things felt confusing but were actually clicking
+
+### What Clicked
+- How all the pieces connect into a real pipeline
+- Why separation of concerns matters
+- How retries, rate limiting, and logging work together in production
+- That complexity becomes manageable when broken into layers
+- That I can reason through unfamiliar systems with enough patience
+
+
+### Reflection
+This week has been both challenging and deeply rewarding. It pushed me to think more deliberately about how systems are designed, not just how code is written. Concepts that once felt abstract like data flow, resilience and structure are now beginning to connect into a coherent mental model.
+
+I’m gaining confidence in navigating complexity and more importantly, I’m developing the curiosity and discipline required to keep learning at depth. This experience has made it clear that building reliable software is as much about design and understanding as it is about writing code *and* I’m motivated to keep going.

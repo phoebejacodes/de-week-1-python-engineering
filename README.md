@@ -2,7 +2,7 @@
 
 Building production-ready data pipelines from scratch. This repository documents my journey into data engineering, demonstrating core skills required for the role.
 
-## 🎯 What This Demonstrates
+## What This Demonstrates
 
 - **API Integration**: Fetching data from REST APIs with authentication
 - **Error Handling**: Robust try/except patterns, retries, graceful failures
@@ -11,6 +11,44 @@ Building production-ready data pipelines from scratch. This repository documents
 - **CLI Tools**: Command-line interfaces with argparse
 - **Project Structure**: Organized, maintainable code architecture
 - **Bash Scripting**: Automation and environment management
+
+## Key Concepts Covered
+
+### 1. Command Line Interfaces
+- Argument parsing with `argparse`
+- Subcommands and flags
+- CLI ergonomics and error handling
+
+### 2. Configuration Management
+- Environment variables via `.env`
+- Centralized config objects
+- Safe defaults and overrides
+
+### 3. API Integration
+- HTTP requests with `requests`
+- Error handling and retries
+- Timeout management
+
+### 4. Reliability Patterns
+- Retry logic with exponential backoff
+- Rate limiting
+- Circuit breaker pattern
+- Graceful degradation
+
+### 5. Data Handling
+- CSV, JSON, JSONL, Parquet formats
+- Schema awareness and type safety
+- Efficient read/write patterns
+
+### 6. Performance & Scaling
+- Chunked processing
+- Streaming reads
+- Memory-efficient design
+
+### 7. Logging & Observability
+- Structured logging
+- Execution tracing
+- Meaningful error messages
 
 ## 📁 Project Structure
 ```
@@ -46,7 +84,7 @@ Building production-ready data pipelines from scratch. This repository documents
 └── README.md
 ```
 
-## 🚀 Featured Project: Weather Data Pipeline
+##  Featured Project: Weather Data Pipeline
 
 A complete ETL pipeline that:
 
@@ -105,7 +143,7 @@ python day-7-final-project/weather_cli.py --cities London,Tokyo,Paris --output d
 ]
 ```
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 | Category | Tools |
 |----------|-------|
@@ -116,7 +154,7 @@ python day-7-final-project/weather_cli.py --cities London,Tokyo,Paris --output d
 | CLI | argparse |
 | Scripting | Bash |
 
-## 📚 Key Learnings
+## Key Learnings
 
 ### Error Handling Pattern
 ```python
@@ -156,12 +194,3 @@ def fetch_with_retry(url, max_retries=3):
     return None
 ```
 
-## 🔜 Next Steps
-
-This repository is Week 1 of my data engineering journey. Upcoming:
-
-- **Week 2-3**: AWS (S3, IAM, Glue, Athena)
-- **Week 4-5**: Snowflake & Data Warehousing
-- **Week 6-7**: dbt (Data Build Tool)
-- **Week 8-9**: Apache Airflow
-- **Week 10+**: End-to-end portfolio project
